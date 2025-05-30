@@ -18,7 +18,7 @@ UrlHandler::UrlHandler()
 {
     m_instance = this;
 
-    QDesktopServices::setUrlHandler("custom", this, "handleUrl");
+    QDesktopServices::setUrlHandler("https", this, "handleUrl");
 }
 
 
@@ -47,7 +47,7 @@ extern "C" {
 #endif
 
 JNIEXPORT void JNICALL
-  Java_org_example_urlhandler_CustomActivity_handleAndroidUrl(
+  Java_io_github_martinburchell_urlhandler_CustomActivity_handleAndroidUrl(
       JNIEnv *env,
       jobject obj,
       jstring url)

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.example.urlhandler"
+    package="io.github.martinburchell.urlhandler"
     android:installLocation="auto"
     android:versionCode="42"
     android:versionName="2.4.18">
@@ -17,7 +17,7 @@
         android:label="-- %%INSERT_APP_NAME%% --"
         android:allowBackup="false">
         <activity
-            android:name="org.example.urlhandler.CustomActivity"
+            android:name="io.github.martinburchell.urlhandler.CustomActivity"
             android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|density"
             android:label="-- %%INSERT_APP_NAME%% --"
             android:launchMode="singleTask"
@@ -27,13 +27,13 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="custom"
-                      android:host="example.org"
-                      android:path="/register/" />
+                <data android:scheme="https"
+                      android:host="martinburchell.github.io"
+                      android:pathPattern="/camcops/register/.*" />
                 <!-- data android:scheme="custom"
                       android:host="example.org"
                       android:pathPrefix="/" / -->

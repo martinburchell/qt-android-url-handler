@@ -73,7 +73,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "org.example.urlhandler"
+        applicationId "io.github.martinburchell.urlhandler"
         resConfig "en"
         minSdkVersion qtMinSdkVersion
         targetSdkVersion qtTargetSdkVersion

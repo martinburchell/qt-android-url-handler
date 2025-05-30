@@ -1,4 +1,4 @@
-package org.example.urlhandler;
+package io.github.martinburchell.urlhandler;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -19,7 +19,7 @@ import org.qtproject.qt.android.bindings.QtApplication;
 public class CustomActivity extends QtActivity
 {
     /* Handle application launch from a hyperlink
-     * e.g. custom://example.org/register/?label=Hello
+     * e.g. https://martinburchell.github.io/register/?label=Hello
      * If no instance of the app is running, onCreate() is called and we pass
      * the URL parameters as arguments to the app's main().
      * If the app is already running, onNewIntent() is called and the URL
